@@ -1,3 +1,16 @@
 spring:
   application:
     name: modulo4.1
+  kafka:
+    bootstrap-servers: localhost:9092, localhost:9093, localhost:9094
+    replicas: 2
+    partitions: 5
+    admin:
+      auto-create-topics: true
+    topic:
+      pessoa: pessoa.atualizada
+    producer:
+      max-block-ms: 5000
+      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
