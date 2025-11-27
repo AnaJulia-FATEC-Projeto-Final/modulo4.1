@@ -4,10 +4,10 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092, localhost:9093, localhost:9094
     replicas: 2
-    partitions: 5
+    particoes: 5
     admin:
       auto-create-topics: true
-    topic:
+    topico:
       pessoa: pessoa.atualizada
     producer:
       max-block-ms: 5000
